@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цікаві факти про тварин</title>
+    <!-- Підключення твого CSS файлу -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <nav>
+        <a href="#home">Головна</a>
+        <a href="#facts">20 Фактів</a>
+        <a href="#gallery">Галерея</a>
+    </nav>
+
+    
+            <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Коала">
+                <span>Коала</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Пингвин">
+                <span>Пингвин</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Жираф">
+                <span>Жираф</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Слон">
+                <span>Слон</span>
+            </div>
+        </div>
+
+
+    <!-- СЕКЦІЯ 1: ГОЛОВНА -->
+    <section id="home">
+        <h1>Цікаві факти про тварин</h1>
+        <div class="fact-box">
+            <p style="font-size: 18px; line-height: 1.6;">
+                На цьому сайті ви дізнаєтеся багато цікавого про дивовижний світ тварин. 
+                Тварини населяють усі континенти нашої планети та мають неймовірні здібності.
+            </p>
+            <button onclick="generateRandomFact()">Показати цікавий факт</button>
+            <!-- Блок, куди JavaScript виводитиме випадковий факт -->
+            <div id="random-fact-display">Натисніть кнопку, щоб дізнатися факт! 😉</div>
+        </div>
+    </section>
+
+    <!-- СЕКЦІЯ 2: 20 ЦІКАВИХ ФАКТІВ -->
+    <section id="facts">
+        <h1>📚 20 цікавих фактів</h1>
+        <div class="fact-box">
+            <ul>
+                <li>Восьминіг має три серця.</li>
+                <li>Коала спить до 20 годин на добу.</li>
+                <li>Гепард розганяється до 110 км/год.</li>
+                <li>Слони впізнають себе у дзеркалі.</li>
+                <li>Жираф має сім шийних хребців.</li>
+                <li>Полярні ведмеді мають чорну шкіру.</li>
+                <li>Кенгуру не можуть рухатися назад.</li>
+                <li>Сова повертає голову на 270°.</li>
+                <li>Бджоли спілкуються танцями.</li>
+                <li>Равлик має тисячі зубів.</li>
+                <li>Пінгвіни можуть пірнати на сотні метрів.</li>
+                <li>Тигри мають унікальний малюнок смуг.</li>
+                <li>Верблюди можуть довго обходитися без води.</li>
+                <li>Летючі миші — єдині ссавці, які літають.</li>
+                <li>Папуги можуть запам'ятовувати слова.</li>
+                <li>Крокодили живуть на Землі понад 200 мільйонів років.</li>
+                <li>Мурахи можуть переносити вагу, більшу за власну у багато разів.</li>
+                <li>Язик синього кита важить приблизно як слон.</li>
+                <li>Дельфіни мають власні «імена».</li>
+                <li>Деякі жаби можуть змінювати колір шкіри.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- СЕКЦІЯ 3: ГАЛЕРЕЯ -->
+    <section id="gallery">
+        <h1>🖼 Галерея</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Коала">
+                <span>Коала</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Пінгвін">
+                <span>Пінгвін</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Жираф">
+                <span>Жираф</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="Слон">
+                <span>Слон</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <script>
+        const animalFacts = [
+            "Восьминіг має три серця.",
+            "Коала спить до 20 годин на добу.",
+            "Гепард розганяється до 110 км/год.",
+            "Слони впізнають себе у дзеркалі.",
+            "Жираф має сім шийних хребців.",
+            "Полярні ведмеді мають чорну шкіру.",
+            "Кенгуру не можуть рухатися назад.",
+            "Сова повертає голову на 270°.",
+            "Бджоли спілкуються танцями.",
+            "Равлик має тисячі зубів.",
+            "Пінгвіни можуть пірнати на сотні метрів.",
+            "Тигри мають унікальний малюнок смуг.",
+            "Верблюди можуть довго обходитися без води.",
+            "Летючі миші — єдині ссавці, які літають.",
+            "Папуги можуть запам'ятовувати слова.",
+            "Крокодили живуть на Землі понад 200 мільйонів років.",
+            "Мурахи можуть переносити вагу, більшу за власну у багато разів.",
+            "Язик синього кита важить приблизно як слон.",
+            "Дельфіни мають власні «імена».",
+            "Деякі жаби можуть змінювати колір шкіри."
+        ];
+
+        function generateRandomFact() {
+            const randomIndex = Math.floor(Math.random() * animalFacts.length);
+            document.getElementById('random-fact-display').innerText = animalFacts[randomIndex];
+        }
+    </script>
+</body>
+</html>
