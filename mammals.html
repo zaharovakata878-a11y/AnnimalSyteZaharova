@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Факти про ссавців</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f5f6fa; color: #2f3640;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4cd137;
+            color: white; padding: 30px 0; text-align: center;
+        }
+        h1 { margin: 0; }
+        nav { margin-top: 15px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+
+        .container { max-width: 900px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; }
+        
+        /* Плитка для карток */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: white;
+            transition: transform 0.3s;
+        }
+        /* Інтерактивний ефект наведення миші */
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%; height: 200px; object-fit: cover;
+        }
+        .info { padding: 15px; }
+        .info h3 { margin-top: 0; color: #4cd137; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Дивовижні факти про ссавців суші</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="mammals.html">Ссавці суші</a>
+            <a href="marine.html">Морські мешканці</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Незвичайні звички та здібності тварин</h2>
+        
+        <div class="grid">
+            <!-- Факт 1 -->
+            <div class="card">
+                <img src="lion.jpg" alt="Леви">
+                <div class="info">
+                    <h3>Як виховують левенят</h3>
+                    <p>Дорослі леви під час ігор з маленькими левенятами часто вдають, що їм дуже боляче від їхніх укусів, і навіть падають на землю. Вони роблять це навмисно, щоб підбадьорити малюків та додати їм впевненості, поки ті лише вчаться полювати.</p>
+                </div>
+            </div>
+
+            <!-- Факт 2 -->
+            <div class="card">
+                <img src="elephant.jpg" alt="Слони">
+                <div class="info">
+                    <h3>Пам'ять та емоції слонів</h3>
+                    <p>Слони мають феноменальну пам'ять. Вони здатні через десятки років згадати маршрути до води або впізнати людину, яка колись поставилася до них добре чи погано. Окрім того, слони вміють щиро сумувати за померлими родичами.</p>
+                </div>
+            </div>
+
+            <!-- Факт 3 -->
+            <div class="card">
+                <img src="cow.jpg" alt="Корови">
+                <div class="info">
+                    <h3>Дружба серед тварин</h3>
+                    <p>Корови — дуже соціальні тварини, які вміють по-справжньому дружити. У череді вони майже завжди обирають собі одну "найкращу подругу" і проводять з нею весь час. Якщо їх розлучити, корова починає сильно сумувати і переживати стрес.</p>
+                </div>
+            </div>
+
+            <!-- Факт 4 -->
+            <div class="card">
+                <img src="cat.jpg" alt="Кішка">
+                <div class="info">
+                    <h3>Користь котячого мурчання</h3>
+                    <p>Мурчання котів — це не просто ознака задоволення. Вчені з'ясували, що звукові коливання, які видає кішка (в діапазоні 25-150 Герц), допомагають її власному тілу швидше відновлюватися, зміцнюють кістки та загоюють дрібні рани.</p>
+                </div>
+            </div>
+
+            <!-- Факт 5 -->
+            <div class="card">
+                <img src="giraffe.jpg" alt="Жираф">
+                <div class="info">
+                    <h3>Серце та тиск жирафів</h3>
+                    <p>Через довгу шию серце жирафа змушене працювати під величезним тиском, щоб доставити кров до мозку. Але коли тварина нахиляє голову попити води, судини біля мозку автоматично звужуються, захищаючи його від небезпечного приливу крові.</p>
+                </div>
+            </div>
+
+            <!-- Факт 6 -->
+            <div class="card">
+                <img src="dog.jpg" alt="Собака">
+                <div class="info">
+                    <h3>Як собаки відчувають час</h3>
+                    <p>Собаки можуть визначати час за допомогою нюху. Завдяки надчутливому носу вони чудово відчувають, як аромат господаря в будинку поступово слабшає з моменту його уходу. За цим рівнем згасання запаху собака розуміє, коли господар має повернутися.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

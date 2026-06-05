@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морські мешканці</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f5f6fa; color: #2f3640;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #00a8ff;
+            color: white; padding: 30px 0; text-align: center;
+        }
+        h1 { margin: 0; }
+        nav { margin-top: 15px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+
+        .container { max-width: 900px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; }
+        
+        .row {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            background: #ffffff;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        /* Ефект наведення */
+        .row:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .row img {
+            width: 40%; max-height: 240px; object-fit: cover;
+        }
+        .text {
+            padding: 20px;
+            width: 60%;
+        }
+        .text h3 { margin-top: 0; color: #00a8ff; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Таємниці підводного світу</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="mammals.html">Ссавці suші</a>
+            <a href="marine.html">Морські мешканці</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Цікаві факти про мешканців океану</h2>
+
+        <!-- Блок 1 -->
+        <div class="row">
+            <img src="octopus.jpg" alt="Восьминіг">
+            <div class="text">
+                <h3>Три серця та блакитна кров восьминогів</h3>
+                <p>Восьминоги мають унікальну будову кровоносної системи: у них працюють одразу три серця. Головне серце перекачує кров по всьому тілу, а два інших проштовхують її через зябра. Крім того, їхня кров через наявність міді замість заліза має незвичний блакитний колір.</p>
+            </div>
+        </div>
+
+        <!-- Блок 2 -->
+        <div class="row">
+            <img src="dolphin.jpg" alt="Афаліна у воді">
+            <div class="text">
+                <h3>Унікальні імена дельфінів</h3>
+                <p>Вчені підтвердили, що дельфіни використовують звуки як особисті імена. Кожен дельфін змалечку вигадує для себе особливий свист. Інші члени зграї запам'ятовують цей звук і використовують його, щоб покликати саме цього конкретного дельфіна.</p>
+            </div>
+        </div>
+
+        <!-- Блок 3 -->
+        <div class="row">
+            <img src="otter.jpg" alt="Морська видра">
+            <div class="text">
+                <h3>Чому калани тримаються за лапки</h3>
+                <p>Морські видри (калани) часто сплять на спині прямо у воді. Щоб сильна океанська течія не розлучила їх і не унесла у відкрите море під час сну, вони міцно тримають одне одного за лапки або загортаються у морські водорості.</p>
+            </div>
+        </div>
+
+        <!-- Блок 4 -->
+        <div class="row">
+            <img src="shark.jpg" alt="Акула">
+            <div class="text">
+                <h3>Незвичне шосте чуття акул</h3>
+                <p>Акули мають особливу систему сприйняття навколишнього світу. Вони здатні відчувати найслабші електричні імпульси, які виникають у воді під час руху інших істот. Це дозволяє їм безпомилково знаходити рибу навіть у повній темряві або під шаром піску на дні.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

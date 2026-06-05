@@ -3,46 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна - Цікаві факти про тварин</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Дивовижні факти про тварин</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f6fa;
+            color: #2f3640;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2f3640;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        h1 { margin: 0; font-size: 2.2em; }
+        
+        nav { margin-top: 15px; }
+        nav a {
+            color: #dcdde1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #00a8ff; }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Анімація появи банера */
+        .banner {
+            background: linear-gradient(135deg, #718093, #2f3640);
+            color: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .banner p { font-size: 1.2em; margin: 0; }
+
+        .main-image {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Навігаційне меню між сторінками -->
-    <nav>
-        <a href="index.html">Головна</a>
-        <a href="facts.html">Факти</a>
-        <a href="gallery.html">Галерея</a>
-    </nav>
+    <header>
+        <h1>Світ живої природи</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="mammals.html">Ссавці суші</a>
+            <a href="marine.html">Морські мешканці</a>
+        </nav>
+    </header>
 
-    <div class="animal">🐘</div>
+    <div class="container">
+        <div class="banner">
+            <p>Цікаві факти про дивовижні можливості, інтелект та звички тварин планети.</p>
+        </div>
 
-    <h1>Цікаві факти про тварин</h1>
-    
-    <div class="fact-box">
-        <p style="font-size: 18px; line-height: 1.6;">
-            На цьому сайті ви дізнаєтеся багато цікавого про дивовижний світ тварин. 
-            Тварини населяють усі континенти нашої планети та мають неймовірні здібності.
-        </p>
-        <button onclick="generateRandomFact()">Показати цікавий факт</button>
-        <div id="random-fact-display">Натисніть кнопку, щоб дізнатися факт! 😉</div>
+        <h2>Про проєкт</h2>
+        <p>Природа навколо нас повна таємниць. Багато тварин мають здібності, які допомагають їм виживати в найважчих умовах, будувати складні стосунки у зграях або знаходити дорогу додому за тисячі кілометрів. На цьому сайті зібрані перевірені та захоплюючі факти про жителів суші та водних глибин.</p>
+        
+        <img src="main.jpg" alt="Природа та тварини" class="main-image">
     </div>
 
-    <script>
-        const animalFacts = [
-            "Восьминіг має три серця.", "Коала спить до 20 годин на добу.", "Гепард розганяється до 110 км/год.",
-            "Слони впізнають себе у дзеркалі.", "Жираф має сім шийних хребців.", "Полярні ведмеді мають чорну шкіру.",
-            "Kенгуру не можуть рухатися назад.", "Сова повертає голову на 270°.", "Бджоли спілкуються танцями.",
-            "Равлик має тисячі зубів.", "Пінгвіни можуть пірнати на сотні метрів.", "Тигри мають унікальний малюнок смуг.",
-            "Верблюди можуть довго обходитися без води.", "Летючі миші — єдині ссавці, які літають.", "Папуги можуть запам'ятовувати слова.",
-            "Крокодили живуть на Землі понад 200 мільйонів років.", "Мурахи можуть переносити вагу, більшу за власну у багато разів.",
-            "Язик синього кита важить приблизно як слон.", "Дельфіни мають власні «імена».", "Деякі жаби можуть змінювати колір шкіри."
-        ];
-
-        function generateRandomFact() {
-            const randomIndex = Math.floor(Math.random() * animalFacts.length);
-            document.getElementById('random-fact-display').innerText = animalFacts[randomIndex];
-        }
-    </script>
 </body>
 </html>
